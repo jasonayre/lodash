@@ -3817,9 +3817,9 @@
 
         while ((fromIndex = indexOf(seen, computed, fromIndex, comparator)) > -1) {
           if (seen !== array) {
-            splice.call(seen, fromIndex, 1);
+            seen.splice(fromIndex, 1);
           }
-          splice.call(array, fromIndex, 1);
+          array.splice(fromIndex, 1);
         }
       }
       return array;
@@ -3843,7 +3843,7 @@
         if (length == lastIndex || index !== previous) {
           var previous = index;
           if (isIndex(index)) {
-            splice.call(array, index, 1);
+            array.splice(index, 1);
           } else {
             baseUnset(array, index);
           }
